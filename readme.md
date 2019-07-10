@@ -1,6 +1,6 @@
 ## Lazy Filter
 
-[![Build Status](https://travis-ci.org/pallab-gain/lazy-filter.svg?branch=master)](https://travis-ci.org/pallab-gain/lazy-filter)
+[![Build Status](https://travis-ci.org/pallab-gain/lazy-filter.svg?branch=master)](https://travis-ci.org/pallab-gain/lazy-filter) [![Coverage Status](https://coveralls.io/repos/github/pallab-gain/lazy-filter/badge.svg?branch=master)](https://coveralls.io/github/pallab-gain/lazy-filter?branch=master)
 #### Remove or filter out value, or list of values from JSON object lazily.
 
 #### Install package
