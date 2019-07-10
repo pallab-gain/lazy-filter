@@ -1,0 +1,55 @@
+{
+  "name": "lazy-filter",
+  "version": "1.0.0",
+  "description": "Remove or filter out value, or list of values from JSON object lazily",
+  "main": "./src/filter.js",
+  "scripts": {
+    "build-prod": "webpack --mode production --config webpack.prod.config.js",
+    "build-dev": "webpack --mode development --config webpack.dev.config.js",
+    "run-dev": "webpack-dev-server --mode development --config webpack.dev.config.js",
+    "generate-doc": "jsdoc -R README.md -r src -d apidoc",
+    "test": "mocha __test__/src/browser/index.test.js",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pallab-gain/lazy-filter.git"
+  },
+  "keywords": [
+    "alternatives",
+    "node",
+    "browser",
+    "filter",
+    "remove",
+    "lazy"
+  ],
+  "author": "pallab.gain@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pallab-gain/lazy-filter/issues"
+  },
+  "homepage": "https://github.com/pallab-gain/lazy-filter#readme",
+  "devDependencies": {
+    "@babel/core": "^7.5.0",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "chai": "^4.2.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "coveralls": "^3.0.4",
+    "eslint": "^6.0.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-loader": "^2.2.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jsdoc": "^3.6.2",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5",
+    "webpack-dev-server": "^3.7.2",
+    "webpack-merge": "^4.2.1"
+  }
+}
