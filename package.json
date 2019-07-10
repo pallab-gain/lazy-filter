@@ -1,5 +1,5 @@
 {
-  "name": "lazyfilter",
+  "name": "@pallab.gain/lazy-filter",
   "version": "1.0.0",
   "description": "Remove or filter out value, or list of values from JSON object lazily",
   "main": "./src/filter.js",

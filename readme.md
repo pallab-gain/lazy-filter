@@ -5,7 +5,7 @@
 
 #### Install package
 ```js
-npm install lazyfilter
+npm install @pallab.gain/lazy-filter
 ```
 
 #### How to use the library
