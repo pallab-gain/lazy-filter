@@ -74,3 +74,6 @@ const pickedUser = LazyFilter.pick(user, ["password","id","email"])
 - Run tests
 
   `npm run test`
+
+#### API Doc
+ - https://obedient-yak.surge.sh/
