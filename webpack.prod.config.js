@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const path = require('path');
-const { name } = require('./package');
+const { jsFileName } = require('./package');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const commonConfig = require('./webpack.common.config');
 
@@ -12,7 +12,7 @@ function resolve (dir) {
 const outputDirectory = 'dist';
 module.exports = merge(commonConfig, {
   output: {
-    filename: `${name}.min.js`
+    filename: `${jsFileName}.min.js`
   },
   optimization: {
     minimize: true

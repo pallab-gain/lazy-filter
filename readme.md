@@ -29,7 +29,7 @@ const user = {
 const {
   omit,
   pick
-} = require('lazyfilter');
+} = require('@pallab.gain/lazy-filter');
 
 // user object filter
 const filteredUser = omit(user, ["password","id","email"])

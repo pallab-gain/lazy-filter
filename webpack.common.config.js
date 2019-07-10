@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const { version, main } = require('./package');
+const { version, libraryName, main } = require('./package');
 
 function resolve (dir) {
   return path.join(__dirname, dir);
@@ -12,7 +12,7 @@ module.exports = {
   entry: [main],
   output: {
     path: resolve(outputDirectory),
-    library: 'LazyFilter',
+    library: libraryName,
     libraryTarget: 'umd',
     umdNamedDefine: true,
     globalObject: "typeof self !== 'undefined' ? self : this"

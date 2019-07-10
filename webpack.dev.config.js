@@ -1,9 +1,8 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const path = require('path');
-const { name } = require('./package');
+const { jsFileName } = require('./package');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const commonConfig = require('./webpack.common.config');
 
 function resolve (dir) {
@@ -14,7 +13,7 @@ const outputDirectory = 'dist';
 module.exports = merge(commonConfig, {
   devtool: 'inline-source-map',
   output: {
-    filename: `${name}.js`
+    filename: `${jsFileName}.js`
   },
   optimization: {
     minimize: false
