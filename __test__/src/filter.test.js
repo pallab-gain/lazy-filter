@@ -57,4 +57,65 @@ describe('LazyFilter test suit', function () {
     // eslint-disable-next-line no-unused-expressions
     expect(newPayload).to.have.all.keys(['firstName', 'email']);
   });
+
+  // eslint-disable-next-line no-undef
+  it('should return "undefined" for empty json object in omit', () => {
+    const payload = undefined;
+    const newPayload = omit(payload, 'email');
+    expect(newPayload).to.be.equal(undefined);
+  });
+
+  // eslint-disable-next-line no-undef
+  it('should return "undefined" for empty json object in pick', () => {
+    const payload = undefined;
+    const newPayload = pick(payload, 'email');
+    expect(newPayload).to.be.equal(undefined);
+  });
+
+  // eslint-disable-next-line no-undef
+  it('should return the exact object for no keys to omit', () => {
+    const payload = {
+      firstName: 'Pallab',
+      email: 'test_lazy@gmail.com',
+      password: 'test',
+      id: 1
+    };
+    const newPayload = omit(payload, undefined);
+    expect(payload).to.be.equal(newPayload);
+  });
+
+  // eslint-disable-next-line no-undef
+  it('should return the exact object for no keys to pick', () => {
+    const payload = {
+      firstName: 'Pallab',
+      email: 'test_lazy@gmail.com',
+      password: 'test',
+      id: 1
+    };
+    const newPayload = pick(payload, undefined);
+    expect(payload).to.be.equal(newPayload);
+  });
+
+  // eslint-disable-next-line no-undef
+  it('should return the exact object for empty array keys to omit', () => {
+    const payload = {
+      firstName: 'Pallab',
+      email: 'test_lazy@gmail.com',
+      password: 'test',
+      id: 1
+    };
+    const newPayload = omit(payload, []);
+    expect(payload).to.be.equal(newPayload);
+  });
+  // eslint-disable-next-line no-undef
+  it('should return the exact object for empty array keys to pick', () => {
+    const payload = {
+      firstName: 'Pallab',
+      email: 'test_lazy@gmail.com',
+      password: 'test',
+      id: 1
+    };
+    const newPayload = pick(payload, []);
+    expect(payload).to.be.equal(newPayload);
+  });
 });

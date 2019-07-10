@@ -6,9 +6,8 @@
   "scripts": {
     "build-prod": "webpack --mode production --config webpack.prod.config.js",
     "build-dev": "webpack --mode development --config webpack.dev.config.js",
-    "run-dev": "webpack-dev-server --mode development --config webpack.dev.config.js",
     "generate-doc": "jsdoc -R README.md -r src -d apidoc",
-    "test": "mocha __test__/src/browser/index.test.js",
+    "test": "mocha __test__/src/filter.test.js",
     "coverage": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {

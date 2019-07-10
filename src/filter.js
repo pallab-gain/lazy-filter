@@ -15,7 +15,7 @@ const filter = (key, { [key]: _, ...rest }) => {
  * @param {Object|undefined} payload JSON object that we want to filter out
  * @param {Array<Number|String>|Number|String} keys A list of keys that we want to filter out
  */
-const omit = (payload = {}, keys = []) => {
+const omit = (payload = undefined, keys = []) => {
   if (!payload) {
     return payload;
   }
@@ -37,7 +37,7 @@ const omit = (payload = {}, keys = []) => {
  * @param {Object|undefined} payload JSON object that we want to filter out
  * @param {Array<Number|String>|Number|String} keys A list of keys that we want to filter out
  */
-const pick = (payload = {}, keys = []) => {
+const pick = (payload = undefined, keys = []) => {
   if (!payload) {
     return payload;
   }
