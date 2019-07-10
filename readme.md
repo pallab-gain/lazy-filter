@@ -14,7 +14,7 @@ npm install @pallab.gain/lazy-filter
 const user = {
   "firstName" :  "Pallab",
   "lastName" :  "Gain",
-  "email" : "example@mail.com"
+  "email" : "example@mail.com",
   "password": "my secrect password",
   "id": "my-secret-id"
 }
