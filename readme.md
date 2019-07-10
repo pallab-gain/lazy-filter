@@ -1,10 +1,14 @@
 ## Lazy Filter
 
+[![Build Status](https://travis-ci.org/pallab-gain/lazy-filter.svg?branch=master)](https://travis-ci.org/pallab-gain/lazy-filter)
 #### Remove or filter out value, or list of values from JSON object lazily.
 
-**Sample use case**
+#### Install package
+```js
+npm install lazyfilter
+```
 
-*Sample JSON object that I want to apply filter*
+#### How to use the library
 
 ```
 const user = {
@@ -16,26 +20,36 @@ const user = {
 }
 ```
 
-*Want to remove `password, id, and email` filed from JSON object*
-
-```
-const publicUser = lazyFilter(user, ["password","id","email"])
-```
-
-*Final output* 
-
-```
-{
-  "firstName" :  "Pallab",
-  "lastName" :  "Gain",
-}
-```
 
 
-#### Install package
-```js
-npm install sized-balanced-tree 
+*Nodejs/react like example*
+
 ```
+// initialize
+const {
+  omit,
+  pick
+} = require('lazyfilter');
+
+// user object filter
+const filteredUser = omit(user, ["password","id","email"])
+const filteredUser = pick(user, ["password","id","email"])
+```
+
+
+
+*Browser example*
+
+```
+// add the library in your html
+<script src="/dist/lazyfilter.js"></script>
+
+// user object filtering
+const omitedUser = LazyFilter.omit(user, ["password","id","email"])
+const pickedUser = LazyFilter.pick(user, ["password","id","email"])
+```
+
+
 
 #### Install devependecies and build library
 

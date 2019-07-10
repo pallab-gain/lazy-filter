@@ -2,15 +2,17 @@
 
 /**
  * Filter out a key from a given object
+ * @private
  * @param {String|number} key The key that we want to remove from the object
  * @param {Object|undefined} rest The object
- * @return {*}
+ * @return {Object|undefined}
  */
 const filter = (key, { [key]: _, ...rest }) => {
   return rest;
 };
 
 /**
+ * @public
  * Should filter out list of keys from the payload
  * @param {Object|undefined} payload JSON object that we want to filter out
  * @param {Array<Number|String>|Number|String} keys A list of keys that we want to filter out
@@ -33,6 +35,7 @@ const omit = (payload = undefined, keys = []) => {
 };
 
 /**
+ * @public
  * Should only pick given list of keys from the object
  * @param {Object|undefined} payload JSON object that we want to filter out
  * @param {Array<Number|String>|Number|String} keys A list of keys that we want to filter out
